@@ -22,8 +22,9 @@ Resources:
   Hello:
     Type: AWS::Serverless::Function
     Properties:
+      StageName: Prod
 
-      Handler: hello.handler
+      Handler: hell.handler
       Runtime: python2.7
       Role:
         Fn::ImportValue:
@@ -32,5 +33,5 @@ Resources:
         GetEvent:
           Type: Api
           Properties:
-            Path: /hello/{name}
+            Path: /hell/{name}
             Method: get
