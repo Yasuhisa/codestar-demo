@@ -1,0 +1,13 @@
+---
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: "awscodestar-arakawa-demo-lambda"
+host: "xb3o20daz2.execute-api.ap-northeast-1.amazonaws.com"
+basePath: "/Prod"
+schemes:
+- "https"
+paths:
+  /hello/{name}:
+    get:
+      responses: {}

@@ -19,11 +19,16 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
+  Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: mystage
+      DefinitionUri: swagger.yml
+
+Resources:
   Hello:
     Type: AWS::Serverless::Function
     Properties:
-      StageName: Prod
-
       Handler: hell.handler
       Runtime: python2.7
       Role:
